@@ -28,7 +28,7 @@ def filterTags(attrs):
     tags['highway'] = 'path'
 
     if 'TRAIL_NO' in attrs:
-        tags['ref'] = attrs['TRAIL_NO'][1:] # this is necesary to make trail numbers match usgs maps, at least in MT/ID
+        tags['ref'] = attrs['TRAIL_NO']#[1:] # this is necesary to make trail numbers match usgs maps, at least in MT/ID
     if 'TRAIL_NAME' in attrs:
         tags['name'] = attrs['TRAIL_NAME'].lower().title()\
         .replace("Nst", "NST")\
